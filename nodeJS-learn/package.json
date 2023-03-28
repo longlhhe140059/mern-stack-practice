@@ -1,5 +1,6 @@
 {
   "name": "learn-node-js",
+  "type": "module",
   "version": "1.0.0",
   "description": "learning node js ",
   "main": "index.js",
