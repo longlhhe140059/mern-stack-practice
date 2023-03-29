@@ -15,4 +15,7 @@ router.post('/insert', (req,res)=>{
     res.send('post insert item')
 })
 
+router.patch('/',(req,res)=>{
+    res.send('PATCH (insert new item if not exist)')
+})
 export default router
