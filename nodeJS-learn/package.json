@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "learning node js ",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "debug": "node inspect server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
