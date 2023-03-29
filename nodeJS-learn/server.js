@@ -15,3 +15,8 @@ const port = process.env.PORT ?? 3000
 app.listen(port , async() =>{
     console.log(`listening on port : ${port}`)
 })
+
+//create default router
+app.get('/',(req,res) =>{
+    res.send('respone from root router testing 1')
+})
