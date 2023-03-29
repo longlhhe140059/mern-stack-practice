@@ -1,5 +1,5 @@
-import userRouter from "./routes/users.js"
-import itemRouter from "./routes/item.js"
+import {userRouter,itemRouter} from "./routes/index.js"
+
 //set up environment variable
 import * as dotenv from "dotenv"
 dotenv.config({ path: "./config.env" })
@@ -8,6 +8,7 @@ dotenv.config({ path: "./config.env" })
 import express from "express";
 const app = express();
 
+//set up port
 const port = process.env.PORT ?? 3000
 
 //
@@ -25,6 +26,3 @@ app.use('/users', userRouter)
 
 app.use('/item', itemRouter)
 
-// import { sum } from "./calculate.js";
-// console.log("test")
-// console.log("sum="+sum(1,2))
