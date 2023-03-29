@@ -1,0 +1,4 @@
+- use npm i in terminal to install module
+- express js use for controlling the router 
+- dotenv use to get var connection string fron .nev file
+- run project with nodemon to auto update server when project change

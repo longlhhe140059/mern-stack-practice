@@ -14,10 +14,10 @@ const ObjectId = require("mongodb").ObjectId;
  
 // This section will help you get a list of all the records.
 recordRoutes.route("/record").get(function (req, res) {
- let db_connect = dbo.getDb("employees");
+ let db_connect = dbo.getDb("mongoPractice");
+ console.log(db_connect)
  db_connect
-   .collection("records")
-   .find({})
+   .collection("item")
    .toArray(function (err, result) {
      if (err) throw err;
      res.json(result);
@@ -61,6 +61,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
      level: req.body.level,
    },
  };
+
  db_connect
    .collection("records")
    .updateOne(myquery, newvalues, function (err, res) {
