@@ -1,4 +1,5 @@
 import userRouter from "./routes/users.js"
+import itemRouter from "./routes/item.js"
 //set up environment variable
 import * as dotenv from "dotenv"
 dotenv.config({ path: "./config.env" })
@@ -21,6 +22,8 @@ app.get('/',(req,res) =>{
 
 //create user router
 app.use('/users', userRouter)
+
+app.use('/item', itemRouter)
 
 // import { sum } from "./calculate.js";
 // console.log("test")
