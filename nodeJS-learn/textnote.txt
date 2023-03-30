@@ -1,5 +1,11 @@
 - use npm i in terminal to install module
-- express js use for controlling the router 
-- dotenv use to get var connection string fron .nev file
 - run project with nodemon to auto update server when project change
 - in debug use c to continue the code use repl to access curent place to try print some data
+
+- dotenv use to get var connection string fron .nev file
+- express js use for controlling the router 
+
+- Middleware trong các Framework lập tình Web (Django, Rails, ExpressJS), 
+sẽ là các hàm được dùng để tiền xử lý, lọc các request trước khi đưa vào xử lý logic 
+hoặc điều chỉnh các response trước khi gửi về cho người dùng
+
