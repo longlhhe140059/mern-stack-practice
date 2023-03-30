@@ -2,3 +2,4 @@
 - express js use for controlling the router 
 - dotenv use to get var connection string fron .nev file
 - run project with nodemon to auto update server when project change
+- in debug use c to continue the code use repl to access curent place to try print some data

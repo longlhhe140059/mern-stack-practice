@@ -15,10 +15,13 @@ const port = process.env.PORT ?? 3000
 app.listen(port , async() =>{
     console.log(`listening on port : ${port}`)
 })
+//use express json to read body request
+app.use(express.json())
 
 //create default router
 app.get('/',(req,res) =>{
     res.send('respone from root router testing 1')
+    debugger
 })
 
 //create user router
