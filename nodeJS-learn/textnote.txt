@@ -4,6 +4,7 @@
 
 - dotenv use to get var connection string fron .nev file
 - express js use for controlling the router 
+- export using for export import file, export default for var or function
 
 - Middleware trong các Framework lập tình Web (Django, Rails, ExpressJS), 
 sẽ là các hàm được dùng để tiền xử lý, lọc các request trước khi đưa vào xử lý logic 
