@@ -1,21 +1,19 @@
 import express  from "express";
+import {itemController} from "../controllers/index.js"
 
 const router = express.Router()
 
 router.get('/',(req, res)=>{
-    res.send('GET user')
+    res.send('GET item default')
 })
 
-router.get('/:id', (req,res)=>{
-    res.send('id of item: '+req.params.id)
-    
-})
+router.get('/items', 
+itemController.getAllItem
+)
 
-router.post('/insert', (req,res)=>{
-    res.send('post insert item')
-})
+router.get('/:id', itemController.getItemById)
 
-router.patch('/',(req,res)=>{
-    res.send('PATCH (insert new item if not exist)')
-})
+router.post('/insert', itemController.insertItemById)
+
+router.patch('/',itemController.updateItemById)
 export default router

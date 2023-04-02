@@ -16,8 +16,6 @@ body('password').isLength({min:5}),
 userController.login
 )
 
-router.post('/register', (req,res)=>{
-    res.send('post register user')
-})
+router.post('/register', userController.register)
 
 export default router

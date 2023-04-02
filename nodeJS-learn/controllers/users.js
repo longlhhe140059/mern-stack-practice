@@ -7,11 +7,16 @@ const login = async(req, res) => {
   }
   const { email, password } = req.body;
 
-  res.send("post login user" + email + "|" + password);
+  res.status(200).json({
+    message:"user login successfully"
+  });
 };
 
 const register = async(req,res) => {
-
+  res.status(201).json({
+    message:"user login successfully",
+    data: "detail user that been create"
+  });
 }
 
 const getDetailUser = async(req,res) => {
