@@ -1,13 +1,14 @@
 import mongoose from "mongoose"
+import { print,OutputType } from "../helpers/print.js"
+
 mongoose.set('strictQuery',true)
 async function connect(){
     try{
         let connection = await mongoose.connect(process.env.MONGO_URI)
-        console.log("finishing connect mongo")
+        print("Connect success to mongo db", OutputType.SUCCESS)
         return connection
     }catch(error){
-        // const {code} = error.code
-        console.log("we in debug")
+        print("Error connect mongo",OutputType.ERROR)
         debugger
         if(error.code == 8000){
             throw new Error('wrong connection usename or password')
