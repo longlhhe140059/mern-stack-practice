@@ -16,6 +16,6 @@ body('password').isLength({min:5}),
 userController.login
 )
 
-router.post('/register', userController.register)
+router.post('/register',body('email').isEmail(),body('password').isLength({min:5}),body('phone').isLength({min:9}), userController.register)
 
 export default router

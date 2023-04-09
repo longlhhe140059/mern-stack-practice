@@ -1,10 +1,10 @@
-const login = async ({email,pass})=>{
-    console.log("login with"+email+"|"+pass)
+const login = async ({email,password})=>{
+    console.log("login with"+email+" | "+password)
 }
 
-const register = async ({name,email,pass,phone})=>{
+const register = async ({name,email,password,phone})=>{
     //validation before this
-    console.log("register with"+name+"|"+email+"|"+pass+"|"+phone)
+    console.log("register with"+name+"|"+email+"|"+password+"|"+phone)
 }
 
 export default {
