@@ -1,6 +1,7 @@
 import{body,validationResult} from 'express-validator'
 import {userRepository} from '../repositories/index.js';
 import {EventEmitter} from "node:events"
+import HttpStatusCode from '../exceptions/HttpStatusCode.js';
 
 const myEvent = new EventEmitter()
 //listen
@@ -12,7 +13,7 @@ myEvent.on('event.register.user',(params)=>{
 const login = async(req, res) => {
   const err = validationResult(req);
   if (!err.isEmpty()) {
-    return res.status(400).json({ errors: err.array() });
+    return res.status(HttpStatusCode.BAD_REQUEST).json({ errors: err.array() });
   }
   const { email, password } = req.body;
   // do something to check login
@@ -23,7 +24,7 @@ const login = async(req, res) => {
 
 
   //send respond
-  res.status(200).json({
+  res.status(HttpStatusCode.OK).json({
     message:"user login successfully"
   });
 };
@@ -38,7 +39,7 @@ const register = async(req,res) => {
   myEvent.emit('event.register.user',{email,password})
 
 
-  res.status(201).json({
+  res.status(HttpStatusCode.INSERT_OK).json({
     message:"user login successfully",
     data: "detail user that been create"
   });
