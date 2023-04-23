@@ -2,12 +2,14 @@
 - run project with nodemon to auto update server when project change
 - in debug use c to continue the code use repl to access curent place to try print some data
 
+lib use
 - dotenv use to get var connection string fron .nev file
 - express js use for controlling the router 
 - express-validator use to validate some input //this is build in function
 - mongoose use to connect with mongo db
 - chalk use to console.log with color
 - nodemon use to restart server when js file change
+- validator use to validate 
 
 - export using for export import file, export default for var or function
 

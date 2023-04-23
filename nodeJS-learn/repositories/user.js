@@ -1,10 +1,12 @@
+import {print,OutputType} from "../helpers/print.js"
 const login = async ({email,password})=>{
-    console.log("login with"+email+" | "+password)
+    print("user login using: "+email+" | "+password,OutputType.INFORMATION)
 }
 
 const register = async ({name,email,password,phone})=>{
     //validation before this
-    console.log("register with"+name+"|"+email+"|"+password+"|"+phone)
+    
+    print("register with"+name+"|"+email+"|"+password+"|"+phone,OutputType.INFORMATION)
 }
 
 export default {
